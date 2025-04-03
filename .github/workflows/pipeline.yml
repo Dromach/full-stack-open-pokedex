@@ -7,8 +7,11 @@ on:
 
 jobs:
     Hello_World:
-        runs-on: ubuntu 20.04
+        runs-on: ubuntu-latest
         steps:
             - name: Say Hello
               run: |
                 echo "Hello World !"
+            - name: Date
+              run: |
+                echo "::set-output name=date::$(date +'%Y-%m-%d')"
